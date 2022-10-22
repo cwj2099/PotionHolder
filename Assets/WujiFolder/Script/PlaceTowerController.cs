@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -59,14 +60,7 @@ public class PlaceTowerController : MonoBehaviour
                     //handle successful placement
                     if (objectHit.tag==targetTag&&Input.GetKey(KeyCode.Mouse0))
                     {
-                        //Create the occupier
-                        Instantiate(occupyPlacement, hit.point,Quaternion.identity);
-
-                        //reset animation mode
-                        if (currentTower.GetComponent<Animator>() != null) 
-                        { currentTower.GetComponent<Animator>().updateMode = AnimatorUpdateMode.Normal; }
-
-                        onSuccessPlacement.Invoke();
+                        PlaceTower(hit.point);
                     }
                 }
           
@@ -97,10 +91,28 @@ public class PlaceTowerController : MonoBehaviour
     public void OnDisable()
     {
         isLocating = false;
+
+        //force placement on disable
+        if (currentTower != null)
+        {
+            PlaceTower(currentTower.transform.position - placementOffset);
+        }
     }
 
     public void ChangeTower(GameObject t)
     {
         tower = t;
+    }
+
+    public void PlaceTower(Vector3 point)
+    {
+        //Create the occupier
+        Instantiate(occupyPlacement, point, Quaternion.identity);
+
+        //reset animation mode
+        if (currentTower.GetComponent<Animator>() != null)
+        { currentTower.GetComponent<Animator>().updateMode = AnimatorUpdateMode.Normal; }
+
+        onSuccessPlacement.Invoke();
     }
 }
