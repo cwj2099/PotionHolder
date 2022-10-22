@@ -48,4 +48,5 @@ public class AnimationControl : MonoBehaviour
     {
         myAni.SetInteger(targetInt, toChange);
     }
+
 }
