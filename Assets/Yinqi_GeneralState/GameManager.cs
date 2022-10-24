@@ -5,9 +5,9 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public GeneralStateBase generalState;
-    public PrepareState prepareState = new PrepareState();
-    public BattleState battleState = new BattleState();
-    public EndState endState = new EndState();
+    public PrepareState prepareState;
+    public BattleState battleState;
+    public EndState endState;
 
     [Header("Timer and text")]
     public Dictionary<string, float> timer = new Dictionary<string, float>();
@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        generalState.Update(this);
+        generalState.Process(this);
     }
 
     public void switchState(string type)
