@@ -5,6 +5,7 @@ using UnityEngine;
 /* *********************************************************************
  * DEVELOPER: Noah Young
  * DATE: 10/24/2022
+ * LAST UPDATED: 10/25/2022
  * PURPOSE: Base class for all towers; stores all appropriate variables.
  * *********************************************************************
  */
@@ -42,7 +43,7 @@ public class TowerBase : MonoBehaviour
     [Space(10)]
     [Header("Rotation")]
     public float angleSpeed;        //  Speed at which the tower will rotate in relation to the mouse. 
-    public float angle;            //  The current angle of the tower. 
+    public float angle;             //  The current angle of the tower. 
 
 
     //  Fire bullet with proper parameters.
@@ -59,7 +60,7 @@ public class TowerBase : MonoBehaviour
 
         bullet.transform.forward = transform.forward + new Vector3(spread, 0, spread);
 
-        Instantiate(bulletPrefab);
+        Instantiate(bulletPrefab, transform.position, transform.rotation);
     }
 
     //  Coroutine that can be called to automatically fire bullets based on their rate of fire. 

@@ -5,6 +5,7 @@ using UnityEngine;
 /* *********************************************************************
  * DEVELOPER: Noah Young
  * DATE: 10/24/2022
+ * LAST UPDATED: 10/24/2022
  * PURPOSE: Player tower class; should rotate and fire bullets. 
  * *********************************************************************
  */

@@ -5,6 +5,7 @@ using UnityEngine;
 /* *********************************************************************
  * DEVELOPER: Noah Young
  * DATE: 10/24/2022
+ * LAST UPDATED: 10/24/2022
  * PURPOSE: Base class for bullets. They basically just move forward for now. 
  * *********************************************************************
  */
