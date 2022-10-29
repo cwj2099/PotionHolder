@@ -35,7 +35,7 @@ public abstract class Tower : MonoBehaviour
     /* BULLET PREFAB 
      * - Necessary to spawn bullet. 
      * */
-    private GameObject _bulletPrefab;    //  Prefab for bullets. 
+    protected GameObject _bulletPrefab;    //  Prefab for bullets. 
 
     [Space(10)]
 
@@ -44,7 +44,7 @@ public abstract class Tower : MonoBehaviour
     /* POWER
      * - The power of each bullet fired by this tower. 
      */
-    private int _power = 1;
+    protected int _power = 1;
     public int Power
     {
         get { return _power; }
@@ -55,7 +55,7 @@ public abstract class Tower : MonoBehaviour
     /* SPEED
      * - The speed of each bullet fired by this tower. 
      */
-    private float _speed = 1;
+    protected float _speed = 1;
     public float Speed
     {
         get { return _speed; }
@@ -66,7 +66,7 @@ public abstract class Tower : MonoBehaviour
     /* SIZE
      * - Size scalar for each bullet fired by this tower.
      */
-    private float _size = 1;       
+    protected float _size = 1;       
     public float Size
     {
         get { return _size; }
@@ -78,7 +78,7 @@ public abstract class Tower : MonoBehaviour
     /* PIERCE
      * - The bullet can hurt an enemy for every point of pierce it has. 
      */
-    private int _pierce = 1;
+    protected int _pierce = 1;
     public int Pierce
     {
         get { return _pierce; }
@@ -90,7 +90,7 @@ public abstract class Tower : MonoBehaviour
     /* LIFESPAN
      * - How long a bullet will last before it deletes itself automatically. Used to prevent bullets from going on for infinity, but can be lowered dramatically to create a short range shotgun effect.
      */
-    private float _lifespan = 3;
+    protected float _lifespan = 3;
     public float Lifespan
     {
         get { return _lifespan; }
@@ -103,7 +103,7 @@ public abstract class Tower : MonoBehaviour
     /* RATE
      * - The tower's rate of fire. The higher it is, the faster it shoots.
      */
-    private float _rate = 1;
+    protected float _rate = 1;
     public float Rate
     {
         get { return _rate; }
@@ -115,7 +115,7 @@ public abstract class Tower : MonoBehaviour
     /* SPREAD
      * - Determines how much bullet spread the tower has. The more spread, the more likely it is a given bullet will miss its target.
      */
-    private float _spread = 0;
+    protected float _spread = 0;
     public float Spread
     {
         get { return _spread; }
@@ -130,8 +130,8 @@ public abstract class Tower : MonoBehaviour
 
 
     [Header("Element")]
-    [Tooltip("The base element of the tower, to be set on instantiation. Default value is Standard.")] 
-    private Elements _element = Elements.Standard;
+    [Tooltip("The base element of the tower, to be set on instantiation. Default value is Standard.")]  [SerializeField]
+    protected Elements _element = Elements.Standard;
     public Elements Element
     {
         get { return _element; }

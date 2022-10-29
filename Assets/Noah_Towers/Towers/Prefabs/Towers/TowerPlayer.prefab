@@ -110,13 +110,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8018bd79b07f30e47964a0e410419748, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 6998241131952583985, guid: b4c9e367e319c5d4991792841a2b26b3,
+  _bulletPrefab: {fileID: 6998241131952583985, guid: b4c9e367e319c5d4991792841a2b26b3,
     type: 3}
-  attackPower: 0
-  attackSpeed: 1
-  attackRate: 0
-  attackSize: 0.8
-  attackSpread: 0
-  element: 0
-  angleSpeed: 100
-  angle: 0
+  _power: 1
+  _speed: 1
+  _size: 1
+  _pierce: 1
+  _lifespan: 3
+  _rate: 1
+  _spread: 0

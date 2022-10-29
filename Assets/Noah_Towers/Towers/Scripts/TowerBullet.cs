@@ -55,6 +55,13 @@ public class TowerBullet : MonoBehaviour
         set { _baseElement = value; }
     }
 
+    // ********************************************************************************************************************************
+
+
+    /// <summary>
+    /// CheckPierce() looks up how much Pierce a bullet has left and either destroys the bullet or tells it to keep going.
+    /// </summary>
+    /// <param name="enemy">The Enemy class (or any of its children) of the enemy taking damage.</param>
     private void CheckPierce(Enemy enemy)
     {
         if (enemy.CannotBePierced)
@@ -77,6 +84,10 @@ public class TowerBullet : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Calculates the damage that a given enemy should take, then removes the bullet as necessary. 
+    /// </summary>
+    /// <param name="_enemy">The Enemy class (or any of its children) of the enemy taking damage.</param>
     private void CalculateDamage(Enemy _enemy)
     {
         float _rawDamage;
@@ -153,9 +164,28 @@ public class TowerBullet : MonoBehaviour
             _enemy.Hp -= _damage;
         }
 
-        //  STEP 7: Check the pierce to destroy the bullet as necessary.
+        //  STEP 7: Check if we should destroy the enemy.
+        if (_enemy.Hp <= 0)
+        {
+            _enemy.EnemyOnDestroy();
+            Destroy(_enemy.gameObject);
+        }
+
+        //  STEP 8: Check the pierce to destroy the bullet as necessary.
         CheckPierce(_enemy);
     }
+
+    /// <summary>
+    /// MoveBullet() is a function that tells the bullet how to move. 
+    /// By default, this function tells the bullet to move forward in a straight line, but if you want custom movement for a certain type of bullet, create a derivative of the TowerBullet class and override this function.
+    /// </summary>
+    protected virtual void MoveBullet()
+    {
+        transform.position += transform.forward * _speed; 
+    }
+
+    // ********************************************************************************************************************************
+
 
     private void Start()
     {
@@ -165,7 +195,7 @@ public class TowerBullet : MonoBehaviour
 
     private void Update()
     {
-        transform.position += transform.forward * _speed;
+        MoveBullet();
     }
 
     private void OnTriggerEnter(Collider other)

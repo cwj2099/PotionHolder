@@ -6,7 +6,7 @@ using UnityEngine;
 /* *********************************************************************
  * DEVELOPER: Noah Young
  * DATE: 10/27/2022
- * LAST UPDATED: 10/27/2022
+ * LAST UPDATED: 10/29/2022
  * PURPOSE: Base class designed for quick iteration of enemy types. 
  * *********************************************************************
  */
@@ -169,6 +169,16 @@ public abstract class Enemy : MonoBehaviour
 
     /* More to be added. */
 
+
+    // PRIVATE VARIABLES
+
+    //  Called in favor of "transform"; saves resources, I promise. 
+    private Transform _tr;
+
+    //  Vec3 used in distance calculations.
+    private Vector3 _oldPos; 
+
+
 // ********************************************************************************************************************************
 
 
@@ -240,10 +250,15 @@ public abstract class Enemy : MonoBehaviour
         }
     }
 
-    /* TO-DO: Write path-following function. */
-    private void UpdatePathPosition()
+    /// <summary>
+    /// TrackDistance() tracks the distance the enemy has moved and writes the value to _distanceTraveled. Used in tower-targeting calculations. 
+    /// </summary>
+    private void TrackDistance()
     {
-        throw new NotImplementedException();
+        Vector3 _distanceVector = _tr.position - _oldPos;
+        float _distanceThisFrame = _distanceVector.magnitude;
+        _distanceTraveled += _distanceThisFrame;
+        _oldPos = _tr.position;
     }
 
 // ********************************************************************************************************************************
@@ -262,11 +277,14 @@ public abstract class Enemy : MonoBehaviour
             SetDefaultElementProperties();
         }
  
-        _maxHp = _hp; 
+        _maxHp = _hp;
+
+        _tr = transform;
+        _oldPos = _tr.position;
     }
 
     private void Update()
     {
-        UpdatePathPosition();
+        TrackDistance();
     }
 }
