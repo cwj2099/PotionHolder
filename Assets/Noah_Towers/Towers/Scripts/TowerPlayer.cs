@@ -5,12 +5,19 @@ using UnityEngine;
 /* *********************************************************************
  * DEVELOPER: Noah Young
  * DATE: 10/24/2022
+ * LAST UPDATED: 10/27/2022
  * PURPOSE: Player tower class; should rotate and fire bullets. 
  * *********************************************************************
  */
 
-public class TowerPlayer : TowerBase
+public class TowerPlayer : Tower
 {
+
+    [Space(10)]
+    [Header("Rotation")]
+    private float _angleSpeed;        //  Speed at which the tower will rotate in relation to the mouse. 
+    private float _angle;             //  The current angle of the tower. 
+
     private void Update()
     {
         //  Rotation. 
@@ -26,15 +33,12 @@ public class TowerPlayer : TowerBase
     //  ***TO-DO*** Fix this rotation code. 
     private void RotateTower()
     {
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
-        mousePos.y = 0;
-        mousePos.y = 0;
+        var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        var lookPos = mousePos - new Vector3(transform.position.x, 0, transform.position.z);
 
-        Vector2 lookDir = worldPos - transform.position;
+        Debug.Log(mousePos);
 
-        angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg;
-
-        transform.eulerAngles = new Vector3(0, angle, 0);
+        var rotation = Quaternion.LookRotation(lookPos);
+        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * _angleSpeed);
     }
 }
