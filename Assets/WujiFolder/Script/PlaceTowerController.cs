@@ -12,6 +12,7 @@ public class PlaceTowerController : MonoBehaviour
     public LayerMask rayMask;
     public GameObject tower;//the tower prefab
     public GameObject currentTower;//the currentTower to be handled
+    public TowerLooking currentLooking;
     public GameObject occupyPlacement;
     public Vector3 placementOffset;
     public UnityEvent onSuccessPlacement;
@@ -86,6 +87,11 @@ public class PlaceTowerController : MonoBehaviour
         //save original color
         if (currentTower.GetComponent<MeshRenderer>() != null)
         { oColor = currentTower.GetComponent<MeshRenderer>().material.color; }
+
+        currentLooking = currentTower.GetComponent<TowerLooking>();
+        if (currentLooking == null) { currentLooking = currentTower.GetComponentInChildren<TowerLooking>(); }
+
+        if (currentLooking != null) { currentLooking.SetUpLooking(new int[] {5,2,3}); }
     }
 
     public void OnDisable()
@@ -112,7 +118,7 @@ public class PlaceTowerController : MonoBehaviour
         //reset animation mode
         if (currentTower.GetComponent<Animator>() != null)
         { currentTower.GetComponent<Animator>().updateMode = AnimatorUpdateMode.Normal; }
-
+        currentLooking = null;
         onSuccessPlacement.Invoke();
     }
 }
