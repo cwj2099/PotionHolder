@@ -8,6 +8,7 @@ public class distance : MonoBehaviour
     [SerializeField] TMP_Text m_Text;
     [SerializeField] Animator anim;
     public float dis;
+    [SerializeField] int power;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,6 @@ public class distance : MonoBehaviour
     void Update()
     {
         dis = anim.GetCurrentAnimatorStateInfo(0).normalizedTime;
-        m_Text.text = dis.ToString();
+        m_Text.text = (dis * power).ToString();
     }
 }
