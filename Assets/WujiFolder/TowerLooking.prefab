@@ -82,6 +82,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 8b52f9a51a50a0046aa5aeb4cc105057, type: 2}
   - {fileID: 2100000, guid: 5b9ec308e6733854195734d6b949bc2a, type: 2}
   - {fileID: 2100000, guid: 1e03694125876d64fad2aa505c97b994, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   bodyRenderer: {fileID: 2053755580929764681}
   aimerRenderer: {fileID: 2053755581560919270}
   aimer: {fileID: 2053755579827874339}
@@ -138,7 +139,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.Burst.CompilerServices;
 using UnityEngine;
 using UnityEngine.Events;
@@ -16,6 +17,7 @@ public class PlaceTowerController : MonoBehaviour
     public GameObject occupyPlacement;
     public Vector3 placementOffset;
     public UnityEvent onSuccessPlacement;
+    public ResourceManager resourceManager;
 
     Color oColor;
     // Start is called before the first frame update
@@ -25,9 +27,18 @@ public class PlaceTowerController : MonoBehaviour
         {
             mainCamera = Camera.main;
         }
+
+        if(resourceManager == null)
+        {
+            resourceManager = FindObjectOfType<ResourceManager>();  
+        }
     }
 
-    // Update is called once per frame
+    /**
+     * You move the tower around 
+     * And update the looking between placable & not placable
+     * 
+     */
     void Update()
     {
         if (isLocating)
@@ -69,16 +80,46 @@ public class PlaceTowerController : MonoBehaviour
         }
     }
 
+    /**
+     * Upon enable, you will instantiate a tower
+     */
     public void OnEnable()
     {
         if (mainCamera == null)
         {
             mainCamera = Camera.main;
         }
+        //get resource from resource manager
+        int[] data = resourceManager.CreateTower();
+        
 
         //create object and start location calculation
         isLocating = true;
         currentTower=Instantiate(tower);
+
+
+        //Update the looking accordingly
+        currentLooking = currentTower.GetComponent<TowerLooking>();
+        if (currentLooking == null) { currentLooking = currentTower.GetComponentInChildren<TowerLooking>(); }
+        if (currentLooking != null) { currentLooking.SetUpLooking(data); }
+
+
+        //Update Tower Attributes accordingly
+        Tower t = currentTower.GetComponent<Tower>();
+        if (t == null) { t = currentTower.GetComponentInChildren<Tower>(); }
+        
+        //The Greatest number decide the power & size
+        t.Power= data.Max(); t.Size = data.Max();
+        currentTower.transform.localScale = new Vector3(1 + data.Max() * 0.2f, 1 + data.Max() * 0.2f, 1 + data.Max() * 0.2f);
+
+        //The fire decide the piercing
+        t.Pierce = 1 + data[0];
+        //The wind decide the fire rate
+        t.Rate = 1 + data[1];
+        //The ice decide the speed
+        t.Speed = 1 + data[2];
+        //The earth decide the life
+        t.Lifespan = 1+ data[3];
 
         //Set animation mode
         if (currentTower.GetComponent<Animator>() != null) 
@@ -88,10 +129,9 @@ public class PlaceTowerController : MonoBehaviour
         if (currentTower.GetComponent<MeshRenderer>() != null)
         { oColor = currentTower.GetComponent<MeshRenderer>().material.color; }
 
-        currentLooking = currentTower.GetComponent<TowerLooking>();
-        if (currentLooking == null) { currentLooking = currentTower.GetComponentInChildren<TowerLooking>(); }
 
-        if (currentLooking != null) { currentLooking.SetUpLooking(new int[] {5,2,3}); }
+
+        
     }
 
     public void OnDisable()
@@ -105,11 +145,17 @@ public class PlaceTowerController : MonoBehaviour
         }
     }
 
+    /**
+     * Change the tower prefab, if needed
+     */
     public void ChangeTower(GameObject t)
     {
         tower = t;
     }
 
+    /**
+     * Events to execute upon tower placements
+     */
     public void PlaceTower(Vector3 point)
     {
         //Create the occupier

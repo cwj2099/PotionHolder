@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7156998385404027068}
   - component: {fileID: 7156998385404027067}
   - component: {fileID: 7156998385404027071}
+  - component: {fileID: 266437427383683879}
   m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
@@ -119,6 +120,28 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &266437427383683879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7156998385404027066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1bf0ebeef3a6b149bc50ce33b0b36ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bulletPrefab: {fileID: 6998241131952583985, guid: b4c9e367e319c5d4991792841a2b26b3,
+    type: 3}
+  _power: 1
+  _speed: 1
+  _size: 1
+  _pierce: 1
+  _lifespan: 3
+  _rate: 1
+  _spread: 0
+  _element: 0
 --- !u!1001 &6197866935493599703
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -185,6 +208,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2053755580929764681, guid: 5f1a9f0521b29654d85491deeff84328,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f1a9f0521b29654d85491deeff84328, type: 3}
