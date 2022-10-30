@@ -7,7 +7,8 @@ public class GameManager : MonoBehaviour
     public GeneralStateBase generalState;
     public PrepareState prepareState;
     public BattleState battleState;
-    public EndState endState;
+    public PassState passState;
+    public FailState failState;
 
     [Header("Timer and text")]
     public Dictionary<string, float> timer = new Dictionary<string, float>();
@@ -19,7 +20,8 @@ public class GameManager : MonoBehaviour
     public GameObject endTimer;
 
     [Header("EnemySequence")]
-    public GameObject sequence;
+    public int waveNum = 1;
+    public GameObject[] sequence;
 
     public void ChangeGeneralState(GeneralStateBase newState)
     {
@@ -60,9 +62,13 @@ public class GameManager : MonoBehaviour
             case "battle":
                 ChangeGeneralState(battleState);
                 break;
-            case "end":
-                ChangeGeneralState(endState);
+            case "pass":
+                ChangeGeneralState(passState);
+                break;
+            case "fail":
+                ChangeGeneralState(failState);
                 break;
         }
     }
+
 }

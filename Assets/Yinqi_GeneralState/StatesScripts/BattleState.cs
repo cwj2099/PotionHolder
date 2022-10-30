@@ -11,7 +11,7 @@ public class BattleState : GeneralStateBase
         gm.battleUI.SetActive(true);
 
         //Open Enemy Generate Sequence (TimeLine)
-        gm.sequence.SetActive(true);
+        gm.sequence[gm.waveNum - 1].SetActive(true);
     }
     public override void Process(GameManager gm)
     {
@@ -38,6 +38,9 @@ public class BattleState : GeneralStateBase
         gm.battleUI.SetActive(false);
 
         //Close Enemy Generate Sequence (TimeLine)
-        gm.sequence.SetActive(false);
+        foreach (GameObject seq in gm.sequence)
+        {
+            seq.SetActive(false);
+        }
     }
 }
