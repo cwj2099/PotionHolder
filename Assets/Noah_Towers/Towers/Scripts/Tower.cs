@@ -159,7 +159,7 @@ public abstract class Tower : MonoBehaviour
         _towerBullet.Lifespan = _lifespan;
 
         //  Assign locational position of bullet. 
-        _bulletPrefab.transform.localScale = new Vector3(_size, _size, _size);
+        _bullet.transform.localScale = new Vector3(_size, _size, _size);
 
         //  Calculate spread.
         var _randomSpread = Random.Range(-_spread, _spread);

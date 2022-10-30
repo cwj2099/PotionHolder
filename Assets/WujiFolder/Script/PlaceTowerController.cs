@@ -107,15 +107,16 @@ public class PlaceTowerController : MonoBehaviour
         //Update Tower Attributes accordingly
         Tower t = currentTower.GetComponent<Tower>();
         if (t == null) { t = currentTower.GetComponentInChildren<Tower>(); }
-        
+
         //The Greatest number decide the power & size
+        t.enabled = false;
         t.Power= data.Max(); t.Size = data.Max();
         currentTower.transform.localScale = new Vector3(1 + data.Max() * 0.2f, 1 + data.Max() * 0.2f, 1 + data.Max() * 0.2f);
 
         //The fire decide the piercing
         t.Pierce = 1 + data[0];
         //The wind decide the fire rate
-        t.Rate = 1 + data[1];
+        t.Rate = 1 - (0.1f * data[1]);
         //The ice decide the speed
         t.Speed = 1 + data[2];
         //The earth decide the life
@@ -166,5 +167,11 @@ public class PlaceTowerController : MonoBehaviour
         { currentTower.GetComponent<Animator>().updateMode = AnimatorUpdateMode.Normal; }
         currentLooking = null;
         onSuccessPlacement.Invoke();
+
+        Tower t = currentTower.GetComponent<Tower>();
+        if (t == null) { t = currentTower.GetComponentInChildren<Tower>(); }
+
+        
+        t.enabled = true;
     }
 }

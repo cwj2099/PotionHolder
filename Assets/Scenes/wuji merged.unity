@@ -659,7 +659,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 817699629}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BattleFiled
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -706,6 +706,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 7156998385404027066, guid: c08d7393c8df5b646aff17cc4468cc5c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7156998385404027070, guid: c08d7393c8df5b646aff17cc4468cc5c,
         type: 3}
@@ -927,7 +932,7 @@ GameObject:
   - component: {fileID: 1419111788}
   - component: {fileID: 1419111787}
   - component: {fileID: 1419111786}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane
   m_TagString: Placement
   m_Icon: {fileID: 0}

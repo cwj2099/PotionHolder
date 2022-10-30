@@ -821,7 +821,7 @@ MonoBehaviour:
   targetTag: Placement
   rayMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 64
   tower: {fileID: 7156998385404027066, guid: c08d7393c8df5b646aff17cc4468cc5c, type: 3}
   currentTower: {fileID: 0}
   currentLooking: {fileID: 0}
