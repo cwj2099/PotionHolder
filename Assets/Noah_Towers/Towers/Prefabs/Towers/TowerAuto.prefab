@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 956396417249505890}
   - component: {fileID: 956396417249505893}
   - component: {fileID: 956396417249505892}
-  - component: {fileID: 956396417249505888}
+  - component: {fileID: 1250951936}
   m_Layer: 3
   m_Name: TowerAuto
   m_TagString: GameController
@@ -27,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 956396417249505894}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -93,12 +93,12 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 956396417249505894}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &956396417249505888
+--- !u!114 &1250951936
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 956396417249505894}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8018bd79b07f30e47964a0e410419748, type: 3}
+  m_Script: {fileID: 11500000, guid: d1bf0ebeef3a6b149bc50ce33b0b36ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _bulletPrefab: {fileID: 6998241131952583985, guid: b4c9e367e319c5d4991792841a2b26b3,
@@ -115,8 +115,9 @@ MonoBehaviour:
   _power: 1
   _speed: 1
   _size: 1
-  _pierce: 1
+  _pierce: 16
   _lifespan: 3
-  _rate: 1
+  _rate: 3
   _spread: 0
   _element: 0
+  _range: 15.3
