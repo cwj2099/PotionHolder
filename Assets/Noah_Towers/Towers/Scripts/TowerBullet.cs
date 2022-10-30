@@ -64,6 +64,7 @@ public class TowerBullet : MonoBehaviour
     /// <param name="enemy">The Enemy class (or any of its children) of the enemy taking damage.</param>
     private void CheckPierce(Enemy enemy)
     {
+        Debug.Log("Checking pierce!");
         if (enemy.CannotBePierced)
         {
             //  TO-DO: Insert bullet destruction instantiation. 
@@ -74,6 +75,7 @@ public class TowerBullet : MonoBehaviour
         {
             if (_pierce <= 0)
             {
+                Debug.Log("No pierce! Destroying...");
                 Destroy(gameObject);
             }
 
@@ -90,6 +92,7 @@ public class TowerBullet : MonoBehaviour
     /// <param name="_enemy">The Enemy class (or any of its children) of the enemy taking damage.</param>
     private void CalculateDamage(Enemy _enemy)
     {
+        Debug.Log("Calculating damage.");
         float _rawDamage;
         int _damage;
         float _weaknessFactor = 1;
@@ -181,16 +184,19 @@ public class TowerBullet : MonoBehaviour
     /// </summary>
     protected virtual void MoveBullet()
     {
-        transform.position += transform.forward * _speed; 
+        transform.position += transform.forward * _speed;
+        Debug.Log(transform.position);
     }
 
     // ********************************************************************************************************************************
 
-
     private void Start()
     {
+        Debug.Log(_lifespan);
+        Debug.Log(_power);
         //  Time-out code.
         StartCoroutine(BulletTimeout(_lifespan));
+
     }
 
     private void Update()

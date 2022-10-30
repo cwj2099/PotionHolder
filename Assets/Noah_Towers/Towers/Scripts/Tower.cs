@@ -148,23 +148,24 @@ public abstract class Tower : MonoBehaviour
     /// </summary>
     protected void FireBullet()
     {
-        //  Create new bullet. 
-        TowerBullet bullet = _bulletPrefab.GetComponent<TowerBullet>();
+        var _bullet = Instantiate(_bulletPrefab, transform.position, Quaternion.identity);
+        TowerBullet _towerBullet = _bullet.GetComponent<TowerBullet>();
 
         //  Assign stats of bullet.
-        bullet.Power = _power;
-        bullet.Speed = _speed;
-        bullet.BaseElement = _element;
-        bullet.Pierce = _pierce;
-        bullet.transform.localScale = new Vector3(_size, _size, _size);
+        _towerBullet.Power = _power;
+        _towerBullet.Speed = _speed;
+        _towerBullet.BaseElement = _element;
+        _towerBullet.Pierce = _pierce;
+        _towerBullet.Lifespan = _lifespan;
+
+        //  Assign locational position of bullet. 
+        _bulletPrefab.transform.localScale = new Vector3(_size, _size, _size);
 
         //  Calculate spread.
         var _randomSpread = Random.Range(-_spread, _spread);
 
         //  Point bullet in right direction. 
-        bullet.transform.forward = transform.forward + new Vector3(_randomSpread, 0, _randomSpread);
+        _bullet.transform.forward = transform.forward + new Vector3(_randomSpread, 0, _randomSpread);
 
-        //  Fire.
-        Instantiate(_bulletPrefab, transform.position, transform.rotation);
     }
 }

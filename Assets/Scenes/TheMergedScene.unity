@@ -519,8 +519,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: TowerAuto
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 956396417249505888, guid: 7d6001024289f72458bda1e13ed822af, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d6001024289f72458bda1e13ed822af, type: 3}
 --- !u!21 &664249407
 Material:
@@ -977,34 +976,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c08d7393c8df5b646aff17cc4468cc5c, type: 3}
---- !u!1 &1250951930 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 956396417249505894, guid: 7d6001024289f72458bda1e13ed822af,
-    type: 3}
-  m_PrefabInstance: {fileID: 599529848}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1250951936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1250951930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1bf0ebeef3a6b149bc50ce33b0b36ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _bulletPrefab: {fileID: 6998241131952583985, guid: b4c9e367e319c5d4991792841a2b26b3,
-    type: 3}
-  _power: 1
-  _speed: 1
-  _size: 1
-  _pierce: 1
-  _lifespan: 3
-  _rate: 1
-  _spread: 0
-  _element: 0
 --- !u!1 &1257841178
 GameObject:
   m_ObjectHideFlags: 0
@@ -1120,34 +1091,6 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
---- !u!1 &1329242463 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 998411183822764492, guid: ee95482aafcd8c8458467c61ad1c7d85,
-    type: 3}
-  m_PrefabInstance: {fileID: 4397142000834943365}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1329242468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1329242463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0815f24b619697143b6be089ef0b6472, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _hp: 100
-  _armor: 0
-  _toughness: 0
-  _speed: 1
-  _baseElement: 0
-  _weaknessElements: 
-  _resistanceElements: 
-  _immunityElements: 
-  _cannotBePierced: 0
-  _dontSetElementProperties: 0
 --- !u!1 &1385006764 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7768885280967353513, guid: 91f8ff6e165901f4097b11e79820923c,
@@ -1433,11 +1376,6 @@ PrefabInstance:
     - target: {fileID: 998411183822764492, guid: ee95482aafcd8c8458467c61ad1c7d85,
         type: 3}
       propertyPath: m_Name
-      value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 998411183822764492, guid: ee95482aafcd8c8458467c61ad1c7d85,
-        type: 3}
-      propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7978539282333437992, guid: ee95482aafcd8c8458467c61ad1c7d85,

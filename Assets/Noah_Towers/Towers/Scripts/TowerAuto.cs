@@ -36,6 +36,7 @@ public class TowerAuto : Tower
     private List<Enemy> _enemies;
 
     //  The range of the tower, to be set upon crafting. Default is 2;
+    [SerializeField]
     private float _range = 2f;
     public float Range
     {
@@ -85,6 +86,7 @@ public class TowerAuto : Tower
                 }
 
                 transform.LookAt(_nearestEnemy.transform);
+                transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
 
                 break;
 
@@ -131,6 +133,7 @@ public class TowerAuto : Tower
     {
         if (other.CompareTag("Enemy"))
         {
+            Debug.Log("Enemy has exited range.");
             _enemies.Remove(other.GetComponent<Enemy>());
         }
     }
