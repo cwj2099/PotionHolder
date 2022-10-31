@@ -171,7 +171,7 @@ public class TowerBullet : MonoBehaviour
         if (_enemy.Hp <= 0)
         {
             _enemy.EnemyOnDestroy();
-            Destroy(_enemy.gameObject);
+            //Destroy(_enemy.gameObject);
         }
 
         //  STEP 8: Check the pierce to destroy the bullet as necessary.
