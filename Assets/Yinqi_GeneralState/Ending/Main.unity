@@ -7882,7 +7882,7 @@ MonoBehaviour:
   battleState: {fileID: 7768885280035850203}
   passState: {fileID: 7768885280018939515}
   failState: {fileID: 1929215868}
-  winState: {fileID: 0}
+  winState: {fileID: 782373381}
   prepareUI: {fileID: 7768885279200180432}
   battleUI: {fileID: 7768885281220202439}
   endUI: {fileID: 7768885280768366782}
