@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PrepareState : GeneralStateBase
 {
+    [SerializeField] float autoSwitch = 10f;
     public override void EnterState(GameManager gm)
     { 
         //battle systems should be disabled
@@ -15,6 +16,8 @@ public class PrepareState : GeneralStateBase
     {
         base.Process(gm);
         gm.timer["prepare"] += Time.deltaTime;
+        if(gm.timer["prepare"] >= autoSwitch)
+            gm.ChangeGeneralState(gm.battleState);
         gm.prepareTimer.GetComponent<TMPro.TMP_Text>().text = gm.timer["prepare"].ToString();
     }
     /*public abstract void FixedUpdate(GameManager gm)

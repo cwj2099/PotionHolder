@@ -7,7 +7,9 @@ public class GameManager : MonoBehaviour
     public GeneralStateBase generalState;
     public PrepareState prepareState;
     public BattleState battleState;
-    public EndState endState;
+    public PassState passState;
+    public FailState failState;
+    public WinState winState;
 
     [Header("Timer and text")]
     public Dictionary<string, float> timer = new Dictionary<string, float>();
@@ -16,10 +18,17 @@ public class GameManager : MonoBehaviour
     public GameObject endUI;
     public GameObject prepareTimer;
     public GameObject battleTimer;
+    [SerializeField] float startDetectPassTime;
     public GameObject endTimer;
 
     [Header("EnemySequence")]
-    public GameObject sequence;
+    public int waveNum = 1;
+    public GameObject[] sequence;
+
+    [Header("PlayerHealth")]
+    public int PlayerHealth;
+    public int PlayerHealthMax;
+    public GameObject HP;
 
     public void ChangeGeneralState(GeneralStateBase newState)
     {
@@ -40,7 +49,7 @@ public class GameManager : MonoBehaviour
         timer.Add("prepare", 0f);
         timer.Add("battle", 0f);
         timer.Add("end", 0f);
-
+        PlayerHealth = PlayerHealthMax;
         ChangeGeneralState(prepareState);
     }
 
@@ -48,6 +57,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         generalState.Process(this);
+        HP.GetComponent<TMPro.TMP_Text>().text = PlayerHealth.ToString();
     }
 
     public void switchState(string type)
@@ -60,9 +70,13 @@ public class GameManager : MonoBehaviour
             case "battle":
                 ChangeGeneralState(battleState);
                 break;
-            case "end":
-                ChangeGeneralState(endState);
+            case "pass":
+                ChangeGeneralState(passState);
+                break;
+            case "fail":
+                ChangeGeneralState(failState);
                 break;
         }
     }
+
 }
