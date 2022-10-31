@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public BattleState battleState;
     public PassState passState;
     public FailState failState;
+    public WinState winState;
 
     [Header("Timer and text")]
     public Dictionary<string, float> timer = new Dictionary<string, float>();

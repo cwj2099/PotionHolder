@@ -1,15 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PassState : GeneralStateBase
 {
     public override void EnterState(GameManager gm)
     {
         base.EnterState(gm);
-        if(gm.waveNum > gm.sequence.Length)
+        if(gm.waveNum >= gm.sequence.Length)
         {
             //winscene
+            gm.ChangeGeneralState(gm.winState);
         }
         else
         {
@@ -18,8 +20,8 @@ public class PassState : GeneralStateBase
             gm.waveNum++;
         }
 
-        //END GAME (Show Result?)
-
+        //Go Back to Prepare
+        gm.ChangeGeneralState(gm.prepareState);
     }
     public override void Process(GameManager gm)
     {

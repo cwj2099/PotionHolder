@@ -273,6 +273,8 @@ PlayableDirector:
     value: {fileID: 1901440614}
   - key: {fileID: -9104220234647001745, guid: dd997bef637fd8040ac8d4ee4a69a69e, type: 2}
     value: {fileID: 193819304}
+  - key: {fileID: -6434033133494518465, guid: dd997bef637fd8040ac8d4ee4a69a69e, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &134060728
@@ -1589,6 +1591,56 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &782373379
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 782373380}
+  - component: {fileID: 782373381}
+  m_Layer: 0
+  m_Name: WinState
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &782373380
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782373379}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7768885281033367879}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &782373381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782373379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65dfe673f6e512946bc3431551b6795e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enterEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  exitEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &817699628
 GameObject:
   m_ObjectHideFlags: 0
@@ -2690,6 +2742,37 @@ Material:
     - _ShadowColor: {r: 0, g: 0, b: 0, a: 1}
     - _ShineColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
+--- !u!1 &1505576560
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1505576561}
+  m_Layer: 0
+  m_Name: timeline helper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1505576561
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505576560}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 17.564928, y: 13.125776, z: -12.269583}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1512913137
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4805,6 +4888,7 @@ MonoBehaviour:
   exitEvent:
     m_PersistentCalls:
       m_Calls: []
+  autoSwitch: 3
 --- !u!4 &7768885279384850099
 Transform:
   m_ObjectHideFlags: 0
@@ -5455,6 +5539,8 @@ PlayableDirector:
     value: {fileID: 1901440614}
   - key: {fileID: -9104220234647001745, guid: dd997bef637fd8040ac8d4ee4a69a69e, type: 2}
     value: {fileID: 193819304}
+  - key: {fileID: -6434033133494518465, guid: dd997bef637fd8040ac8d4ee4a69a69e, type: 2}
+    value: {fileID: 1505576560}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &7768885279692341074
@@ -5798,6 +5884,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  buttons:
+  - {fileID: 7768885281133274346}
+  - {fileID: 1350093508}
 --- !u!320 &7768885280046196865
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -7793,6 +7882,7 @@ MonoBehaviour:
   battleState: {fileID: 7768885280035850203}
   passState: {fileID: 7768885280018939515}
   failState: {fileID: 1929215868}
+  winState: {fileID: 0}
   prepareUI: {fileID: 7768885279200180432}
   battleUI: {fileID: 7768885281220202439}
   endUI: {fileID: 7768885280768366782}
@@ -7836,6 +7926,7 @@ Transform:
   - {fileID: 7768885280035850196}
   - {fileID: 7768885280018939508}
   - {fileID: 1929215869}
+  - {fileID: 782373380}
   m_Father: {fileID: 7768885280412294120}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

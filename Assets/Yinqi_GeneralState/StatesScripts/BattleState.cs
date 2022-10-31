@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BattleState : GeneralStateBase
 {
+    [SerializeField] GameObject[] buttons;
     public override void EnterState(GameManager gm)
     {
         base.EnterState(gm);
@@ -36,7 +37,10 @@ public class BattleState : GeneralStateBase
         }
         //Deactivate battle UI
         gm.battleUI.SetActive(false);
-
+        foreach(GameObject button in buttons)
+        {
+            button.SetActive(false);
+        }
         //Close Enemy Generate Sequence (TimeLine)
         foreach (GameObject seq in gm.sequence)
         {
