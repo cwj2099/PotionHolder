@@ -59,6 +59,8 @@ public abstract class Enemy : MonoBehaviour
         set { _toughness = value; }
     }
 
+    [SerializeField] private GameObject _parent;
+
 // ********************************************************************************************************************************
 
 
@@ -207,7 +209,7 @@ public abstract class Enemy : MonoBehaviour
     /// </summary>
     public virtual void EnemyOnDestroy()
     {
-
+        _parent.SetActive(false);
     }
 
     /// <summary>

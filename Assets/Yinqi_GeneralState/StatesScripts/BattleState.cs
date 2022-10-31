@@ -5,6 +5,8 @@ using UnityEngine;
 public class BattleState : GeneralStateBase
 {
     [SerializeField] GameObject[] buttons;
+    [SerializeField] float startDetectPassTime;
+    GameObject[] activeEnemies;
     public override void EnterState(GameManager gm)
     {
         base.EnterState(gm);
@@ -19,6 +21,21 @@ public class BattleState : GeneralStateBase
         base.Process(gm);
         gm.timer["battle"] += Time.deltaTime;
         gm.battleTimer.GetComponent<TMPro.TMP_Text>().text = gm.timer["battle"].ToString();
+        activeEnemies = GameObject.FindGameObjectsWithTag("Enemy");
+        if (gm.timer["battle"] > startDetectPassTime)
+        {
+            if(gm.PlayerHealth > 0)
+            {
+                if (activeEnemies.Length <= 0)
+                {
+                    gm.ChangeGeneralState(gm.passState);
+                }
+
+            }else
+            {
+                gm.ChangeGeneralState(gm.failState);
+            }
+        }
     }
     /*public abstract void FixedUpdate(GameManager gm)
     { }*/
@@ -27,7 +44,6 @@ public class BattleState : GeneralStateBase
         base.ExitState(gm);
         //clearUp
         gm.timer["battle"] = 0f;
-        GameObject[] activeEnemies = GameObject.FindGameObjectsWithTag("Enemy");
         if (activeEnemies.Length > 0)
         {
             for (int i = 0; i < activeEnemies.Length; i++)

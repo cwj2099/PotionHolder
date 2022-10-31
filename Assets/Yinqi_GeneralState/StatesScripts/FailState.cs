@@ -10,6 +10,7 @@ public class FailState : GeneralStateBase
         base.EnterState(gm);
         //END GAME (Show Result?)
         gm.waveNum = 1;
+        gm.PlayerHealth = gm.PlayerHealthMax;
         SceneManager.LoadScene("FailScene");
     }
     public override void Process(GameManager gm)

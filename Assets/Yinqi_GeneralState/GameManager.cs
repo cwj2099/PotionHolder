@@ -18,11 +18,17 @@ public class GameManager : MonoBehaviour
     public GameObject endUI;
     public GameObject prepareTimer;
     public GameObject battleTimer;
+    [SerializeField] float startDetectPassTime;
     public GameObject endTimer;
 
     [Header("EnemySequence")]
     public int waveNum = 1;
     public GameObject[] sequence;
+
+    [Header("PlayerHealth")]
+    public int PlayerHealth;
+    public int PlayerHealthMax;
+    public GameObject HP;
 
     public void ChangeGeneralState(GeneralStateBase newState)
     {
@@ -43,7 +49,7 @@ public class GameManager : MonoBehaviour
         timer.Add("prepare", 0f);
         timer.Add("battle", 0f);
         timer.Add("end", 0f);
-
+        PlayerHealth = PlayerHealthMax;
         ChangeGeneralState(prepareState);
     }
 
@@ -51,6 +57,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         generalState.Process(this);
+        HP.GetComponent<TMPro.TMP_Text>().text = PlayerHealth.ToString();
     }
 
     public void switchState(string type)
