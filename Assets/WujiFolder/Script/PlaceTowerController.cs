@@ -60,13 +60,13 @@ public class PlaceTowerController : MonoBehaviour
                     //handle not able to place apperance
                     if (objectHit.tag != targetTag)
                     {
-                        if (currentTower.GetComponent<MeshRenderer>() != null)
-                        { currentTower.GetComponent<MeshRenderer>().material.color = new Color(255,0,0); }
+                        if (currentLooking != null)
+                        { currentLooking.range.GetComponent<SpriteRenderer>().color = new Color(255,0,0); }
                     }
                     else
                     {
-                        if (currentTower.GetComponent<MeshRenderer>() != null)
-                        { currentTower.GetComponent<MeshRenderer>().material.color = oColor; }
+                        if (currentLooking != null)
+                        { currentLooking.range.GetComponent<SpriteRenderer>().color = oColor; }
                     }
 
 
@@ -110,7 +110,7 @@ public class PlaceTowerController : MonoBehaviour
 
         //The Greatest number decide the power & size
         t.enabled = false;
-        t.Power= data.Max()*5; t.Size = data.Max()/5f; t.GetComponent<TowerAutoAlter>().Range = 3 + data.Max()/2;
+        t.Power= data.Max()*5; t.Size = data.Max()/5f; t.GetComponent<TowerAutoAlter>().Range = 4 + data.Max()/4 + data[3];
         currentTower.transform.localScale = new Vector3(0.5f + data.Max() * 0.2f, 0.5f + data.Max() * 0.2f, 0.5f + data.Max() * 0.2f);
         //set range looking
         float temp = t.GetComponent<TowerAutoAlter>().Range*2;
@@ -132,8 +132,8 @@ public class PlaceTowerController : MonoBehaviour
         { currentTower.GetComponent<Animator>().updateMode = AnimatorUpdateMode.UnscaledTime; }
 
         //save original color
-        if (currentTower.GetComponent<MeshRenderer>() != null)
-        { oColor = currentTower.GetComponent<MeshRenderer>().material.color; }
+        if (currentLooking != null)
+        { oColor = currentLooking.range.GetComponent<SpriteRenderer>().color; }
 
 
 

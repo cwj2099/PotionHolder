@@ -123,7 +123,7 @@ MonoBehaviour:
   targetObject: {fileID: 0}
   travelTime: 1
   disableOnReached: 1
-  faceCamera: 0
+  faceCamera: 1
 --- !u!1 &4039033474690749563
 GameObject:
   m_ObjectHideFlags: 0

@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 972457142489807308}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -127,6 +127,7 @@ MonoBehaviour:
   _rate: 1
   _spread: 0
   _element: 0
+  _nearestEnemy: {fileID: 0}
   _range: 2
 --- !u!1 &7156998385404027066
 GameObject:
@@ -243,7 +244,7 @@ PrefabInstance:
     - target: {fileID: 2053755580146348125, guid: 5f1a9f0521b29654d85491deeff84328,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2053755580146348125, guid: 5f1a9f0521b29654d85491deeff84328,
         type: 3}
@@ -279,11 +280,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2053755580929764681, guid: 5f1a9f0521b29654d85491deeff84328,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f1a9f0521b29654d85491deeff84328, type: 3}
