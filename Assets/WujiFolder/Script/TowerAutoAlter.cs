@@ -5,6 +5,7 @@ using UnityEngine;
 //copied from original
 public class TowerAutoAlter:Tower
 {
+    public Enemy _nearestEnemy;
     public enum TargetSetting
     {
         Nearest,    // Target the enemy with the least travel distance. 
@@ -63,14 +64,28 @@ public class TowerAutoAlter:Tower
             //  Find the enemy with the lowest travel distance and target that enemy.
             case (TargetSetting.Nearest):
 
-                Enemy _nearestEnemy = _enemies[0];
+                List<int> toRemove= new List<int>();
+
+                _nearestEnemy = _enemies[0];
 
                 for (var i = 0; i < _enemies.Count; i++)
-                {
+                {                   
+                   
                     Enemy _currentEnemy = _enemies[i];
                     if (_currentEnemy.DistanceTraveled < _nearestEnemy.DistanceTraveled)
                     {
                         _nearestEnemy = _enemies[i];
+                    }
+
+                    if (!_currentEnemy.gameObject.activeInHierarchy) { toRemove.Add(i); }
+                }
+
+                //add this to avoid targeting on dead enemies
+                for (var i = 0; i < _enemies.Count; i++)
+                {
+                    if (toRemove.Contains(i))
+                    {
+                        _enemies.RemoveAt(i);
                     }
                 }
 
@@ -108,12 +123,15 @@ public class TowerAutoAlter:Tower
     }
 
     //  Add enemies when entering the Tower's radius,
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Enemy"))
         {
             Debug.Log("Enemy within range.");
-            _enemies.Add(other.GetComponent<Enemy>());
+            if (!_enemies.Contains(other.GetComponent<Enemy>()))
+            {
+                _enemies.Add(other.GetComponent<Enemy>());
+            }
         }
     }
 
