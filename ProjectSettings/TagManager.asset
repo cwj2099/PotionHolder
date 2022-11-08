@@ -7,6 +7,8 @@ TagManager:
   - Placement
   - Enemy
   - GameManager
+  - FxTemporaire
+  - FlyTarget
   layers:
   - Default
   - TransparentFX

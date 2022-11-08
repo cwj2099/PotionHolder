@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.Burst.CompilerServices;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -103,15 +104,17 @@ public class PlaceTowerController : MonoBehaviour
         if (currentLooking == null) { currentLooking = currentTower.GetComponentInChildren<TowerLooking>(); }
         if (currentLooking != null) { currentLooking.SetUpLooking(data); }
 
-
         //Update Tower Attributes accordingly
         Tower t = currentTower.GetComponent<Tower>();
         if (t == null) { t = currentTower.GetComponentInChildren<Tower>(); }
 
         //The Greatest number decide the power & size
         t.enabled = false;
-        t.Power= data.Max()*5; t.Size = data.Max()/5f; t.GetComponent<TowerAutoAlter>().Range = 1 + data.Max();
+        t.Power= data.Max()*5; t.Size = data.Max()/5f; t.GetComponent<TowerAutoAlter>().Range = 3 + data.Max()/2;
         currentTower.transform.localScale = new Vector3(0.5f + data.Max() * 0.2f, 0.5f + data.Max() * 0.2f, 0.5f + data.Max() * 0.2f);
+        //set range looking
+        float temp = t.GetComponent<TowerAutoAlter>().Range*2;
+        if (currentLooking != null) { currentLooking.range.transform.localScale = new Vector3(temp, temp, temp); }
 
         //The fire decide the piercing
         t.Pierce = 1 + data[0];
@@ -167,6 +170,8 @@ public class PlaceTowerController : MonoBehaviour
         //reset animation mode
         if (currentTower.GetComponent<Animator>() != null)
         { currentTower.GetComponent<Animator>().updateMode = AnimatorUpdateMode.Normal; }
+
+        if (currentLooking != null) { currentLooking.range.SetActive(false); }
         currentLooking = null;
         onSuccessPlacement.Invoke();
 

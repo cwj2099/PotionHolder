@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 4039033474239869953, guid: 10f2c1c596482934e8332576594b129c,
         type: 3}
       propertyPath: m_Name
-      value: GetIce
+      value: GetIce Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4039033474239869966, guid: 10f2c1c596482934e8332576594b129c,
         type: 3}
@@ -102,5 +102,31 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4294937600
       objectReference: {fileID: 0}
+    - target: {fileID: 7955369589817663683, guid: 10f2c1c596482934e8332576594b129c,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 20fc16f3375628549b7e28a81b276983,
+        type: 3}
+    - target: {fileID: 7955369589817663683, guid: 10f2c1c596482934e8332576594b129c,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7955369589817663683, guid: 10f2c1c596482934e8332576594b129c,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.8857602
+      objectReference: {fileID: 0}
+    - target: {fileID: 7955369589817663683, guid: 10f2c1c596482934e8332576594b129c,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.033018887
+      objectReference: {fileID: 0}
+    - target: {fileID: 7955369589817663683, guid: 10f2c1c596482934e8332576594b129c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10f2c1c596482934e8332576594b129c, type: 3}
