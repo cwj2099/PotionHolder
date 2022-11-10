@@ -7,6 +7,9 @@ public class Spwaner : MonoBehaviour
     [SerializeField] private GameObject target;
     private void OnEnable()
     {
-        target.SetActive(true);
+        if (target != null)
+        {
+            target.SetActive(true);
+        }
     }
 }

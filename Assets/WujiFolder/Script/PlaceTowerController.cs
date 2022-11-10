@@ -110,20 +110,21 @@ public class PlaceTowerController : MonoBehaviour
 
         //The Greatest number decide the power & size
         t.enabled = false;
-        t.Power= data.Max()*5; t.Size = data.Max()/5f; t.GetComponent<TowerAutoAlter>().Range = 4 + data.Max()/4 + data[3];
+        t.Power= data.Max()*5; t.Size = data.Max()/5f; 
+        t.GetComponent<TowerAutoAlter>().Range = 3 + data[3]*4;
         currentTower.transform.localScale = new Vector3(0.5f + data.Max() * 0.2f, 0.5f + data.Max() * 0.2f, 0.5f + data.Max() * 0.2f);
         //set range looking
         float temp = t.GetComponent<TowerAutoAlter>().Range*2;
         if (currentLooking != null) { currentLooking.range.transform.localScale = new Vector3(temp, temp, temp); }
 
         //The fire decide the piercing
-        t.Pierce = 1 + data[0];
+        t.Pierce = data[0];
         //The wind decide the fire rate
-        t.Rate = 1 - (0.1f * data[1]);
+        t.Rate = 3f - (0.5f* data[1]);
         //The ice decide the speed
-        t.Speed = 0.25f + data[2]/4f;
+        t.Speed = 0.1f + data[2]/4f;
         //The earth decide the life
-        t.Lifespan = 1+ data[3];
+        t.Lifespan = 0.3f + data[3]*0.3f;
         //set looking
         t.Element = (Elements)data.ToList().IndexOf(data.Max());
 
