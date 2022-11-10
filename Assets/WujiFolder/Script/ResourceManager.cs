@@ -11,6 +11,7 @@ public class ResourceManager : MonoBehaviour
     public int[] selectedResources;//the one player selected to be used
     public TextMeshProUGUI[] selectedNumbers;
     public Button create;
+    public TowerLookingPreview lookingPreviews;
     void Start()
     {
         selectedResources = new int[holdingResources.Length];
@@ -63,7 +64,8 @@ public class ResourceManager : MonoBehaviour
         }
 
         create.gameObject.SetActive(selectedResources.Max() > 0);
-
+        lookingPreviews.SetUpLooking(selectedResources);
     }
+
 
 }

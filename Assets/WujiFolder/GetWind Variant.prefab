@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 4039033474239869953, guid: 10f2c1c596482934e8332576594b129c,
         type: 3}
       propertyPath: m_Name
-      value: GetWind
+      value: GetWind Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4039033474239869966, guid: 10f2c1c596482934e8332576594b129c,
         type: 3}
@@ -95,7 +95,33 @@ PrefabInstance:
     - target: {fileID: 4039033474690749561, guid: 10f2c1c596482934e8332576594b129c,
         type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 453050169
+      value: 4278255417
       objectReference: {fileID: 0}
+    - target: {fileID: 7955369589817663683, guid: 10f2c1c596482934e8332576594b129c,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8dd2b6ca6a93b6944a0f2277e115cd94,
+        type: 3}
+    - target: {fileID: 7955369589817663683, guid: 10f2c1c596482934e8332576594b129c,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.71169114
+      objectReference: {fileID: 0}
+    - target: {fileID: 7955369589817663683, guid: 10f2c1c596482934e8332576594b129c,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7955369589817663683, guid: 10f2c1c596482934e8332576594b129c,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.57254905
+      objectReference: {fileID: 0}
+    - target: {fileID: 7955369589817663683, guid: 10f2c1c596482934e8332576594b129c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e77b15c1fa244894ebae1dadfbd10941, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10f2c1c596482934e8332576594b129c, type: 3}

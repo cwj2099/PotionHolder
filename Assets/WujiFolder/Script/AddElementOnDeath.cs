@@ -13,7 +13,7 @@ public class AddElementOnDeath : MonoBehaviour
         {
             for(int i=0;i<resourcesChance.Length;i++)
             { 
-                if (Random.Range(0, 10) <= resourcesChance[i])
+                if (Random.Range(1, 10) <= resourcesChance[i])
                 {
                     var temp=Instantiate(effects[i]);
                     temp.transform.position = transform.position;

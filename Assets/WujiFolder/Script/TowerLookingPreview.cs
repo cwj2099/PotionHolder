@@ -1,15 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using System.Linq;
+using UnityEngine;
+using UnityEngine.UI;
 
-public class TowerLooking : MonoBehaviour
+public class TowerLookingPreview : MonoBehaviour
 {
+    public GameObject button;
     public Material[] TowerMaterials;//fire 1, wind 2, ice 3
-    public SpriteRenderer bodyRenderer;
-    public SpriteRenderer aimerRenderer;
-    public Transform aimer;
-    public GameObject range;
+    public Image bodyRenderer;
+    public Image aimerRenderer;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,11 +27,7 @@ public class TowerLooking : MonoBehaviour
         int maxValue = elements.Max();
         int maxIndex = elements.ToList().IndexOf(maxValue);
         bodyRenderer.material = TowerMaterials[maxIndex];
-        aimerRenderer.material = TowerMaterials[maxIndex];        
-    }
-
-    public void RotateAimer(Vector3 r)
-    {
-        aimer.Rotate(r);
+        aimerRenderer.material = TowerMaterials[maxIndex];
+        button.transform.localScale = new Vector3(0.5f + elements.Max() * 0.2f, 0.5f + elements.Max() * 0.2f, 0.5f + elements.Max() * 0.2f);
     }
 }
