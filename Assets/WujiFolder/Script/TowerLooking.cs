@@ -9,6 +9,7 @@ public class TowerLooking : MonoBehaviour
     public SpriteRenderer bodyRenderer;
     public SpriteRenderer aimerRenderer;
     public Transform aimer;
+    public GameObject range;
     // Start is called before the first frame update
     void Start()
     {

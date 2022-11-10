@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.Burst.CompilerServices;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -59,13 +60,13 @@ public class PlaceTowerController : MonoBehaviour
                     //handle not able to place apperance
                     if (objectHit.tag != targetTag)
                     {
-                        if (currentTower.GetComponent<MeshRenderer>() != null)
-                        { currentTower.GetComponent<MeshRenderer>().material.color = new Color(255,0,0); }
+                        if (currentLooking != null)
+                        { currentLooking.range.GetComponent<SpriteRenderer>().color = new Color(255,0,0); }
                     }
                     else
                     {
-                        if (currentTower.GetComponent<MeshRenderer>() != null)
-                        { currentTower.GetComponent<MeshRenderer>().material.color = oColor; }
+                        if (currentLooking != null)
+                        { currentLooking.range.GetComponent<SpriteRenderer>().color = oColor; }
                     }
 
 
@@ -103,32 +104,36 @@ public class PlaceTowerController : MonoBehaviour
         if (currentLooking == null) { currentLooking = currentTower.GetComponentInChildren<TowerLooking>(); }
         if (currentLooking != null) { currentLooking.SetUpLooking(data); }
 
-
         //Update Tower Attributes accordingly
         Tower t = currentTower.GetComponent<Tower>();
         if (t == null) { t = currentTower.GetComponentInChildren<Tower>(); }
 
         //The Greatest number decide the power & size
         t.enabled = false;
-        t.Power= data.Max(); t.Size = data.Max();
-        currentTower.transform.localScale = new Vector3(1 + data.Max() * 0.2f, 1 + data.Max() * 0.2f, 1 + data.Max() * 0.2f);
+        t.Power= data.Max()*5; t.Size = data.Max()/5f; t.GetComponent<TowerAutoAlter>().Range = 4 + data.Max()/4 + data[3];
+        currentTower.transform.localScale = new Vector3(0.5f + data.Max() * 0.2f, 0.5f + data.Max() * 0.2f, 0.5f + data.Max() * 0.2f);
+        //set range looking
+        float temp = t.GetComponent<TowerAutoAlter>().Range*2;
+        if (currentLooking != null) { currentLooking.range.transform.localScale = new Vector3(temp, temp, temp); }
 
         //The fire decide the piercing
         t.Pierce = 1 + data[0];
         //The wind decide the fire rate
         t.Rate = 1 - (0.1f * data[1]);
         //The ice decide the speed
-        t.Speed = 1 + data[2];
+        t.Speed = 0.25f + data[2]/4f;
         //The earth decide the life
         t.Lifespan = 1+ data[3];
+        //set looking
+        t.Element = (Elements)data.ToList().IndexOf(data.Max());
 
         //Set animation mode
         if (currentTower.GetComponent<Animator>() != null) 
         { currentTower.GetComponent<Animator>().updateMode = AnimatorUpdateMode.UnscaledTime; }
 
         //save original color
-        if (currentTower.GetComponent<MeshRenderer>() != null)
-        { oColor = currentTower.GetComponent<MeshRenderer>().material.color; }
+        if (currentLooking != null)
+        { oColor = currentLooking.range.GetComponent<SpriteRenderer>().color; }
 
 
 
@@ -165,6 +170,8 @@ public class PlaceTowerController : MonoBehaviour
         //reset animation mode
         if (currentTower.GetComponent<Animator>() != null)
         { currentTower.GetComponent<Animator>().updateMode = AnimatorUpdateMode.Normal; }
+
+        if (currentLooking != null) { currentLooking.range.SetActive(false); }
         currentLooking = null;
         onSuccessPlacement.Invoke();
 
