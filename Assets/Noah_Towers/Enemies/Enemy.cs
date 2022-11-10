@@ -59,7 +59,7 @@ public abstract class Enemy : MonoBehaviour
         set { _toughness = value; }
     }
 
-    [SerializeField] private GameObject _parent;
+    [SerializeField] public GameObject _parent;
 
 // ********************************************************************************************************************************
 
