@@ -4,7 +4,7 @@ using UnityEngine;
 /* *********************************************************************
  * DEVELOPER: Noah Young
  * DATE: 10/27/2022
- * LAST UPDATED: 10/29/2022
+ * LAST UPDATED: 11/3/2022
  * PURPOSE: Tower class for all non-player towers. This is the prefab that should be spawned when crafting. 
  * *********************************************************************
  */
@@ -34,6 +34,11 @@ public class TowerAuto : Tower
 
     //  Keeps track of the enemies within the range of the tower. 
     private List<Enemy> _enemies;
+    public List<Enemy> Enemies
+    {
+        get { return _enemies; }
+        set { _enemies = value; }
+    }
 
     //  The range of the tower, to be set upon crafting. Default is 2;
     [SerializeField]
@@ -105,10 +110,20 @@ public class TowerAuto : Tower
             yield return new WaitForSeconds(rate);
             Debug.Log("Fired!");
             TargetEnemy();
-            FireBullet();
+
+            if (_enemies.Count > 0)
+            {
+                FireBullet();
+            }
+
         }
     }
     // ********************************************************************************************************************************
+
+    private void Awake()
+    {
+        FindTowerComponents();
+    }
 
     private void Start()
     {

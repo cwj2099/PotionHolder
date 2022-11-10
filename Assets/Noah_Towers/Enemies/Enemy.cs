@@ -225,14 +225,14 @@ public abstract class Enemy : MonoBehaviour
             case (Elements.Fire):
                 //  Weak to: WATER
                 //  Resists: EARTH   
-                _weaknessElements.Add(Elements.Water);
+                _weaknessElements.Add(Elements.Wind);
                 _resistanceElements.Add(Elements.Earth);
                 break;
 
-            case (Elements.Water):
+            case (Elements.Wind):
                 //  Weak to: THUNDER
                 //  Resists: FIRE   
-                _weaknessElements.Add(Elements.Thunder);
+                _weaknessElements.Add(Elements.Ice);
                 _resistanceElements.Add(Elements.Fire);
                 break;
 
@@ -240,14 +240,14 @@ public abstract class Enemy : MonoBehaviour
                 //  Weak to: FIRE
                 //  Resists: THUNDER
                 _weaknessElements.Add(Elements.Fire);
-                _resistanceElements.Add(Elements.Thunder);
+                _resistanceElements.Add(Elements.Ice);
                 break;
 
-            case (Elements.Thunder):
+            case (Elements.Ice):
                 //  Weak to: EARTH
                 //  Resists: WATER
                 _weaknessElements.Add(Elements.Earth);
-                _resistanceElements.Add(Elements.Water);
+                _resistanceElements.Add(Elements.Wind);
                 break;
         }
     }
