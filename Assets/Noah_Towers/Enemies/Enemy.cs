@@ -59,8 +59,6 @@ public abstract class Enemy : MonoBehaviour
         set { _toughness = value; }
     }
 
-    [SerializeField] public GameObject _parent;
-
 // ********************************************************************************************************************************
 
 
@@ -178,10 +176,20 @@ public abstract class Enemy : MonoBehaviour
     private Transform _tr;
 
     //  Vec3 used in distance calculations.
-    private Vector3 _oldPos; 
+    private Vector3 _oldPos;
+
+    //  Enemy UI; set on instantiation. 
+    private EnemyUI _ui; 
+    public EnemyUI UI
+    {
+        get { return _ui; }
+        set { _ui = value; }
+    }
+
+    [SerializeField] private GameObject _parent;
 
 
-// ********************************************************************************************************************************
+    // ********************************************************************************************************************************
 
 
     // FUNCTIONS
@@ -225,14 +233,14 @@ public abstract class Enemy : MonoBehaviour
             case (Elements.Fire):
                 //  Weak to: WATER
                 //  Resists: EARTH   
-                _weaknessElements.Add(Elements.Water);
+                _weaknessElements.Add(Elements.Wind);
                 _resistanceElements.Add(Elements.Earth);
                 break;
 
-            case (Elements.Water):
+            case (Elements.Wind):
                 //  Weak to: THUNDER
                 //  Resists: FIRE   
-                _weaknessElements.Add(Elements.Thunder);
+                _weaknessElements.Add(Elements.Ice);
                 _resistanceElements.Add(Elements.Fire);
                 break;
 
@@ -240,14 +248,14 @@ public abstract class Enemy : MonoBehaviour
                 //  Weak to: FIRE
                 //  Resists: THUNDER
                 _weaknessElements.Add(Elements.Fire);
-                _resistanceElements.Add(Elements.Thunder);
+                _resistanceElements.Add(Elements.Ice);
                 break;
 
-            case (Elements.Thunder):
+            case (Elements.Ice):
                 //  Weak to: EARTH
                 //  Resists: WATER
                 _weaknessElements.Add(Elements.Earth);
-                _resistanceElements.Add(Elements.Water);
+                _resistanceElements.Add(Elements.Wind);
                 break;
         }
     }
@@ -283,6 +291,8 @@ public abstract class Enemy : MonoBehaviour
 
         _tr = transform;
         _oldPos = _tr.position;
+
+        _ui = GetComponentInChildren<EnemyUI>();
     }
 
     private void Update()

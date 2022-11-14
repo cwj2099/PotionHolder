@@ -47,7 +47,6 @@ public class TowerBullet : MonoBehaviour
         set { _pierce = value; }
     }
 
-
     private Elements _baseElement;
     public Elements BaseElement
     {
@@ -55,6 +54,9 @@ public class TowerBullet : MonoBehaviour
         set { _baseElement = value; }
     }
 
+    [Header("Visuals")]
+    [SerializeField]
+    private GameObject _explosion; 
     // ********************************************************************************************************************************
 
 
@@ -64,7 +66,6 @@ public class TowerBullet : MonoBehaviour
     /// <param name="enemy">The Enemy class (or any of its children) of the enemy taking damage.</param>
     private void CheckPierce(Enemy enemy)
     {
-        Debug.Log("Checking pierce!");
         if (enemy.CannotBePierced)
         {
             //  TO-DO: Insert bullet destruction instantiation. 
@@ -75,7 +76,6 @@ public class TowerBullet : MonoBehaviour
         {
             if (_pierce <= 0)
             {
-                Debug.Log("No pierce! Destroying...");
                 Destroy(gameObject);
             }
 
@@ -92,7 +92,6 @@ public class TowerBullet : MonoBehaviour
     /// <param name="_enemy">The Enemy class (or any of its children) of the enemy taking damage.</param>
     private void CalculateDamage(Enemy _enemy)
     {
-        Debug.Log("Calculating damage.");
         float _rawDamage;
         int _damage;
         float _weaknessFactor = 1;
