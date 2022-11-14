@@ -2042,7 +2042,8 @@ PrefabInstance:
         type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5698808053272476300, guid: af5c3f05dfd55f648bf4081b7c13ecd3,
+        type: 3}
     - target: {fileID: 7183010410479827848, guid: 037a29f6f8bdd2542beabf772c470a14,
         type: 3}
       propertyPath: m_RootOrder
@@ -5238,7 +5239,8 @@ PrefabInstance:
         type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5698808053272476300, guid: af5c3f05dfd55f648bf4081b7c13ecd3,
+        type: 3}
     - target: {fileID: 7183010410479827848, guid: 037a29f6f8bdd2542beabf772c470a14,
         type: 3}
       propertyPath: m_RootOrder
@@ -5737,7 +5739,8 @@ PrefabInstance:
         type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5698808053272476300, guid: af5c3f05dfd55f648bf4081b7c13ecd3,
+        type: 3}
     - target: {fileID: 7183010410479827848, guid: 037a29f6f8bdd2542beabf772c470a14,
         type: 3}
       propertyPath: m_RootOrder
@@ -5946,6 +5949,22 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5521874977528508741, guid: af5c3f05dfd55f648bf4081b7c13ecd3,
+        type: 3}
+      propertyPath: _healthBarPrefab
+      value: 
+      objectReference: {fileID: 8026559867514242214, guid: 6055b6acb94633d488ab9d49be26a946,
+        type: 3}
+    - target: {fileID: 5521874977528508741, guid: af5c3f05dfd55f648bf4081b7c13ecd3,
+        type: 3}
+      propertyPath: _colors.Array.data[0].a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5521874977528508741, guid: af5c3f05dfd55f648bf4081b7c13ecd3,
+        type: 3}
+      propertyPath: _colors.Array.data[1].a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5698808053272476290, guid: af5c3f05dfd55f648bf4081b7c13ecd3,
         type: 3}
@@ -6846,6 +6865,16 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 5750448297834550675, guid: ee95482aafcd8c8458467c61ad1c7d85,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6699327475064342839, guid: ee95482aafcd8c8458467c61ad1c7d85,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7978539282333437992, guid: ee95482aafcd8c8458467c61ad1c7d85,
         type: 3}
       propertyPath: m_RootOrder
@@ -6924,7 +6953,6 @@ MonoBehaviour:
   _hp: 100
   _armor: 0
   _toughness: 0
-  _parent: {fileID: 0}
   _speed: 1
   _baseElement: 0
   _weaknessElements: 
@@ -6932,6 +6960,7 @@ MonoBehaviour:
   _immunityElements: 
   _cannotBePierced: 0
   _dontSetElementProperties: 0
+  _parent: {fileID: 0}
 --- !u!1 &767016285
 GameObject:
   m_ObjectHideFlags: 0
@@ -12765,7 +12794,8 @@ PrefabInstance:
         type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5698808053272476300, guid: af5c3f05dfd55f648bf4081b7c13ecd3,
+        type: 3}
     - target: {fileID: 7183010410479827848, guid: 037a29f6f8bdd2542beabf772c470a14,
         type: 3}
       propertyPath: m_RootOrder
@@ -13231,7 +13261,8 @@ PrefabInstance:
         type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5698808053272476300, guid: af5c3f05dfd55f648bf4081b7c13ecd3,
+        type: 3}
     - target: {fileID: 7183010410479827848, guid: 037a29f6f8bdd2542beabf772c470a14,
         type: 3}
       propertyPath: m_RootOrder
@@ -17323,7 +17354,8 @@ PrefabInstance:
         type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5698808053272476300, guid: af5c3f05dfd55f648bf4081b7c13ecd3,
+        type: 3}
     - target: {fileID: 7183010410479827848, guid: 037a29f6f8bdd2542beabf772c470a14,
         type: 3}
       propertyPath: m_RootOrder

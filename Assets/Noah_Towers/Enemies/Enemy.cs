@@ -59,8 +59,6 @@ public abstract class Enemy : MonoBehaviour
         set { _toughness = value; }
     }
 
-    [SerializeField] private GameObject _parent;
-
 // ********************************************************************************************************************************
 
 
@@ -178,10 +176,20 @@ public abstract class Enemy : MonoBehaviour
     private Transform _tr;
 
     //  Vec3 used in distance calculations.
-    private Vector3 _oldPos; 
+    private Vector3 _oldPos;
+
+    //  Enemy UI; set on instantiation. 
+    private EnemyUI _ui; 
+    public EnemyUI UI
+    {
+        get { return _ui; }
+        set { _ui = value; }
+    }
+
+    [SerializeField] private GameObject _parent;
 
 
-// ********************************************************************************************************************************
+    // ********************************************************************************************************************************
 
 
     // FUNCTIONS
@@ -283,6 +291,8 @@ public abstract class Enemy : MonoBehaviour
 
         _tr = transform;
         _oldPos = _tr.position;
+
+        _ui = GetComponentInChildren<EnemyUI>();
     }
 
     private void Update()

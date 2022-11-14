@@ -162,14 +162,18 @@ public class TowerBulletAlter : MonoBehaviour
             _enemy.Hp -= _damage;
         }
 
-        //  STEP 7: Check if we should destroy the enemy.
+        //  STEP 7: Update enemy UI. 
+
+        _enemy.UI.UpdateUI(_damage);
+
+        //  STEP 8: Check if we should destroy the enemy.
         if (_enemy.Hp <= 0)
         {
             _enemy.EnemyOnDestroy();
             //Destroy(_enemy.gameObject);
         }
 
-        //  STEP 8: Check the pierce to destroy the bullet as necessary.
+        //  STEP 9: Check the pierce to destroy the bullet as necessary.
         CheckPierce(_enemy);
     }
 
@@ -207,7 +211,8 @@ public class TowerBulletAlter : MonoBehaviour
         {
             var temp=Instantiate(effects[(int)BaseElement],transform.position,Quaternion.identity);
             temp.transform.localScale = transform.localScale;
-            CalculateDamage(other.GetComponent<Enemy>());
+            Enemy _enemy = other.GetComponent<Enemy>();
+            CalculateDamage(_enemy);
         }
     }
 
