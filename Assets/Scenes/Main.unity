@@ -3160,7 +3160,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 8
+  m_SortingOrder: 20
   m_Sprite: {fileID: 21300000, guid: cc5b95aa13acd764db88ca0056066cd1, type: 3}
   m_Color: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 1}
   m_FlipX: 0
@@ -7738,7 +7738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyPool:
-  - {fileID: 3564685782029360505, guid: 0e73e203fff41c246be2fcd2f5902790, type: 3}
+  - {fileID: 5698808053272476300, guid: 6d4a2303df233d441ab1b9fc891e5b7f, type: 3}
   EnemyRoutes:
   - {fileID: 8898599950727941866, guid: 3b6dbd9cf6c2ea64c8c7af53acc17ef2, type: 3}
   - {fileID: 7189281081257904096, guid: 4b48e4c4d16fe3f45907156d416bc90c, type: 3}
@@ -8037,7 +8037,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 30
   m_Sprite: {fileID: 21300000, guid: a4f7014e069217c4996c7dd02d9e4bf2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

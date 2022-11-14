@@ -57,10 +57,23 @@ public class SpawnEnemies : MonoBehaviour
         
         GameObject path = Instantiate(EnemyRoutes[route]);
         GameObject enemy = Instantiate(EnemyPool[type]);
-        enemy.transform.parent = path.transform;
+        if (enemy.GetComponent<Enemy>() != null)
+        {
+            enemy.transform.parent = path.transform;
+            enemy.transform.localPosition = offset;
+            enemy.transform.localScale = new Vector3(enemy.transform.localScale.x * facing, enemy.transform.localScale.y, enemy.transform.localScale.z);
+        }
+        else
+        {
+            enemy = enemy.GetComponentInChildren<Enemy>().gameObject;
+            enemy.transform.parent.parent = path.transform;
+            enemy.transform.parent.localPosition = offset;
+            enemy.transform.parent.localScale = new Vector3(enemy.transform.localScale.x * facing, enemy.transform.localScale.y, enemy.transform.localScale.z);
+        }
+        
 
-        enemy.transform.localPosition = offset;//
-        enemy.transform.localScale = new Vector3(enemy.transform.localScale.x * facing, enemy.transform.localScale.y, enemy.transform.localScale.z);
+        
+       
         enemy.GetComponent<Enemy>()._parent = path;
     }
 
