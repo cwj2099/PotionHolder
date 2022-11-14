@@ -258,70 +258,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 11683115}
   m_CullTransparentMesh: 1
---- !u!1 &26240570
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 26240571}
-  m_Layer: 0
-  m_Name: OneWave (6)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &26240571
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 26240570}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.20769346, y: 0.58389574, z: -10.020728}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2093054511}
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &27950966
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 27950967}
-  m_Layer: 0
-  m_Name: OneWave (7)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &27950967
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 27950966}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.20769346, y: 0.58389574, z: -10.020728}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1924136469}
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &44559516
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,78 +433,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 58944420}
   m_CullTransparentMesh: 1
---- !u!1 &82250130
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 82250131}
-  - component: {fileID: 82250132}
-  m_Layer: 0
-  m_Name: SpawanEnemies
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &82250131
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 82250130}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1976646308}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &82250132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 82250130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ef06e609569a654abab010089a62ede, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyPool:
-  - {fileID: 3564685782029360505, guid: 261ca4ad19405ac4392baccadd1eb345, type: 3}
-  EnemyRoutes:
-  - {fileID: 8898599950727941866, guid: 3b6dbd9cf6c2ea64c8c7af53acc17ef2, type: 3}
-  - {fileID: 7189281081257904096, guid: 4b48e4c4d16fe3f45907156d416bc90c, type: 3}
-  - {fileID: 1384151529424325596, guid: fa9bed1099c8e9549ab76b1f420373af, type: 3}
-  SpawnDatas:
-  - amount: 3
-    type: 0
-    route: 0
-    randomOffset: 1
-    offset: {x: 0, y: 0, z: 0}
-    facingRight: 1
-    time: 2
-  - amount: 3
-    type: 0
-    route: 1
-    randomOffset: 1
-    offset: {x: 0, y: 0, z: 0}
-    facingRight: 0
-    time: 2
-  - amount: 3
-    type: 0
-    route: 2
-    randomOffset: 1
-    offset: {x: 0, y: 0, z: 0}
-    facingRight: 1
-    time: 2
 --- !u!1 &93951502
 GameObject:
   m_ObjectHideFlags: 0
@@ -3238,38 +3102,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 547816195}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &557050979
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 557050980}
-  m_Layer: 0
-  m_Name: OneWave (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &557050980
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 557050979}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.20769346, y: 0.58389574, z: -10.020728}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1456792162}
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &568125392
 GameObject:
   m_ObjectHideFlags: 0
@@ -4212,78 +4044,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 576002325}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &596701085
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 596701086}
-  - component: {fileID: 596701087}
-  m_Layer: 0
-  m_Name: SpawanEnemies
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &596701086
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 596701085}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 784530192}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &596701087
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 596701085}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ef06e609569a654abab010089a62ede, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyPool:
-  - {fileID: 3564685782029360505, guid: 261ca4ad19405ac4392baccadd1eb345, type: 3}
-  EnemyRoutes:
-  - {fileID: 8898599950727941866, guid: 3b6dbd9cf6c2ea64c8c7af53acc17ef2, type: 3}
-  - {fileID: 7189281081257904096, guid: 4b48e4c4d16fe3f45907156d416bc90c, type: 3}
-  - {fileID: 1384151529424325596, guid: fa9bed1099c8e9549ab76b1f420373af, type: 3}
-  SpawnDatas:
-  - amount: 3
-    type: 0
-    route: 0
-    randomOffset: 1
-    offset: {x: 0, y: 0, z: 0}
-    facingRight: 1
-    time: 2
-  - amount: 3
-    type: 0
-    route: 1
-    randomOffset: 1
-    offset: {x: 0, y: 0, z: 0}
-    facingRight: 0
-    time: 2
-  - amount: 3
-    type: 0
-    route: 2
-    randomOffset: 1
-    offset: {x: 0, y: 0, z: 0}
-    facingRight: 1
-    time: 2
 --- !u!1 &613116595
 GameObject:
   m_ObjectHideFlags: 0
@@ -4723,13 +4483,13 @@ MonoBehaviour:
   waveNum: 1
   sequence:
   - {fileID: 1431339803}
-  - {fileID: 1347239664}
-  - {fileID: 1976646307}
-  - {fileID: 1870098743}
-  - {fileID: 557050979}
-  - {fileID: 784530191}
-  - {fileID: 26240570}
-  - {fileID: 27950966}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   PlayerHealth: 0
   PlayerHealthMax: 5
   HP: {fileID: 1736898274}
@@ -5352,38 +5112,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778397979}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &784530191
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 784530192}
-  m_Layer: 0
-  m_Name: OneWave (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &784530192
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 784530191}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.20769346, y: 0.58389574, z: -10.020728}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 596701086}
-  m_Father: {fileID: 0}
-  m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &792995179
 GameObject:
   m_ObjectHideFlags: 0
@@ -6703,78 +6431,6 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
---- !u!1 &1270843203
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1270843204}
-  - component: {fileID: 1270843205}
-  m_Layer: 0
-  m_Name: SpawanEnemies
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1270843204
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1270843203}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1870098744}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1270843205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1270843203}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ef06e609569a654abab010089a62ede, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyPool:
-  - {fileID: 3564685782029360505, guid: 261ca4ad19405ac4392baccadd1eb345, type: 3}
-  EnemyRoutes:
-  - {fileID: 8898599950727941866, guid: 3b6dbd9cf6c2ea64c8c7af53acc17ef2, type: 3}
-  - {fileID: 7189281081257904096, guid: 4b48e4c4d16fe3f45907156d416bc90c, type: 3}
-  - {fileID: 1384151529424325596, guid: fa9bed1099c8e9549ab76b1f420373af, type: 3}
-  SpawnDatas:
-  - amount: 3
-    type: 0
-    route: 0
-    randomOffset: 1
-    offset: {x: 0, y: 0, z: 0}
-    facingRight: 1
-    time: 2
-  - amount: 3
-    type: 0
-    route: 1
-    randomOffset: 1
-    offset: {x: 0, y: 0, z: 0}
-    facingRight: 0
-    time: 2
-  - amount: 3
-    type: 0
-    route: 2
-    randomOffset: 1
-    offset: {x: 0, y: 0, z: 0}
-    facingRight: 1
-    time: 2
 --- !u!1 &1316852293
 GameObject:
   m_ObjectHideFlags: 0
@@ -6969,38 +6625,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1329248545}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1347239664
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1347239665}
-  m_Layer: 0
-  m_Name: OneWave (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1347239665
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1347239664}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.20769346, y: 0.58389574, z: -10.020728}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1744776742}
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1359313708
 GameObject:
   m_ObjectHideFlags: 0
@@ -7724,78 +7348,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1456792161
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1456792162}
-  - component: {fileID: 1456792163}
-  m_Layer: 0
-  m_Name: SpawanEnemies
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1456792162
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1456792161}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 557050980}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1456792163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1456792161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ef06e609569a654abab010089a62ede, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyPool:
-  - {fileID: 3564685782029360505, guid: 261ca4ad19405ac4392baccadd1eb345, type: 3}
-  EnemyRoutes:
-  - {fileID: 8898599950727941866, guid: 3b6dbd9cf6c2ea64c8c7af53acc17ef2, type: 3}
-  - {fileID: 7189281081257904096, guid: 4b48e4c4d16fe3f45907156d416bc90c, type: 3}
-  - {fileID: 1384151529424325596, guid: fa9bed1099c8e9549ab76b1f420373af, type: 3}
-  SpawnDatas:
-  - amount: 3
-    type: 0
-    route: 0
-    randomOffset: 1
-    offset: {x: 0, y: 0, z: 0}
-    facingRight: 1
-    time: 2
-  - amount: 3
-    type: 0
-    route: 1
-    randomOffset: 1
-    offset: {x: 0, y: 0, z: 0}
-    facingRight: 0
-    time: 2
-  - amount: 3
-    type: 0
-    route: 2
-    randomOffset: 1
-    offset: {x: 0, y: 0, z: 0}
-    facingRight: 1
-    time: 2
 --- !u!1 &1467381140
 GameObject:
   m_ObjectHideFlags: 0
@@ -8186,7 +7738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyPool:
-  - {fileID: 3564685782029360505, guid: 261ca4ad19405ac4392baccadd1eb345, type: 3}
+  - {fileID: 3564685782029360505, guid: 0e73e203fff41c246be2fcd2f5902790, type: 3}
   EnemyRoutes:
   - {fileID: 8898599950727941866, guid: 3b6dbd9cf6c2ea64c8c7af53acc17ef2, type: 3}
   - {fileID: 7189281081257904096, guid: 4b48e4c4d16fe3f45907156d416bc90c, type: 3}
@@ -8922,78 +8474,6 @@ RectTransform:
   m_AnchoredPosition: {x: 191.85, y: 200.04}
   m_SizeDelta: {x: 162.1503, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1744776741
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1744776742}
-  - component: {fileID: 1744776743}
-  m_Layer: 0
-  m_Name: SpawanEnemies
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1744776742
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1744776741}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1347239665}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1744776743
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1744776741}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ef06e609569a654abab010089a62ede, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyPool:
-  - {fileID: 3564685782029360505, guid: 261ca4ad19405ac4392baccadd1eb345, type: 3}
-  EnemyRoutes:
-  - {fileID: 8898599950727941866, guid: 3b6dbd9cf6c2ea64c8c7af53acc17ef2, type: 3}
-  - {fileID: 7189281081257904096, guid: 4b48e4c4d16fe3f45907156d416bc90c, type: 3}
-  - {fileID: 1384151529424325596, guid: fa9bed1099c8e9549ab76b1f420373af, type: 3}
-  SpawnDatas:
-  - amount: 3
-    type: 0
-    route: 0
-    randomOffset: 1
-    offset: {x: 0, y: 0, z: 0}
-    facingRight: 1
-    time: 2
-  - amount: 3
-    type: 0
-    route: 1
-    randomOffset: 1
-    offset: {x: 0, y: 0, z: 0}
-    facingRight: 0
-    time: 2
-  - amount: 3
-    type: 0
-    route: 2
-    randomOffset: 1
-    offset: {x: 0, y: 0, z: 0}
-    facingRight: 1
-    time: 2
 --- !u!1 &1744793431
 GameObject:
   m_ObjectHideFlags: 0
@@ -9771,38 +9251,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1862814458}
   m_CullTransparentMesh: 1
---- !u!1 &1870098743
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1870098744}
-  m_Layer: 0
-  m_Name: OneWave (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1870098744
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1870098743}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.20769346, y: 0.58389574, z: -10.020728}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1270843204}
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1871662205
 GameObject:
   m_ObjectHideFlags: 0
@@ -10035,78 +9483,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1916170027}
   m_CullTransparentMesh: 1
---- !u!1 &1924136468
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1924136469}
-  - component: {fileID: 1924136470}
-  m_Layer: 0
-  m_Name: SpawanEnemies
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1924136469
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1924136468}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 27950967}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1924136470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1924136468}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ef06e609569a654abab010089a62ede, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyPool:
-  - {fileID: 3564685782029360505, guid: 261ca4ad19405ac4392baccadd1eb345, type: 3}
-  EnemyRoutes:
-  - {fileID: 8898599950727941866, guid: 3b6dbd9cf6c2ea64c8c7af53acc17ef2, type: 3}
-  - {fileID: 7189281081257904096, guid: 4b48e4c4d16fe3f45907156d416bc90c, type: 3}
-  - {fileID: 1384151529424325596, guid: fa9bed1099c8e9549ab76b1f420373af, type: 3}
-  SpawnDatas:
-  - amount: 3
-    type: 0
-    route: 0
-    randomOffset: 1
-    offset: {x: 0, y: 0, z: 0}
-    facingRight: 1
-    time: 2
-  - amount: 3
-    type: 0
-    route: 1
-    randomOffset: 1
-    offset: {x: 0, y: 0, z: 0}
-    facingRight: 0
-    time: 2
-  - amount: 3
-    type: 0
-    route: 2
-    randomOffset: 1
-    offset: {x: 0, y: 0, z: 0}
-    facingRight: 1
-    time: 2
 --- !u!1 &1965443309
 GameObject:
   m_ObjectHideFlags: 0
@@ -10204,38 +9580,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1965443309}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1976646307
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1976646308}
-  m_Layer: 0
-  m_Name: OneWave (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1976646308
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1976646307}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.20769346, y: 0.58389574, z: -10.020728}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 82250131}
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2019066517
 GameObject:
   m_ObjectHideFlags: 0
@@ -10602,78 +9946,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2058513010}
   m_CullTransparentMesh: 1
---- !u!1 &2093054510
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2093054511}
-  - component: {fileID: 2093054512}
-  m_Layer: 0
-  m_Name: SpawanEnemies
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2093054511
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2093054510}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 26240571}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2093054512
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2093054510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ef06e609569a654abab010089a62ede, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyPool:
-  - {fileID: 3564685782029360505, guid: 261ca4ad19405ac4392baccadd1eb345, type: 3}
-  EnemyRoutes:
-  - {fileID: 8898599950727941866, guid: 3b6dbd9cf6c2ea64c8c7af53acc17ef2, type: 3}
-  - {fileID: 7189281081257904096, guid: 4b48e4c4d16fe3f45907156d416bc90c, type: 3}
-  - {fileID: 1384151529424325596, guid: fa9bed1099c8e9549ab76b1f420373af, type: 3}
-  SpawnDatas:
-  - amount: 3
-    type: 0
-    route: 0
-    randomOffset: 1
-    offset: {x: 0, y: 0, z: 0}
-    facingRight: 1
-    time: 2
-  - amount: 3
-    type: 0
-    route: 1
-    randomOffset: 1
-    offset: {x: 0, y: 0, z: 0}
-    facingRight: 0
-    time: 2
-  - amount: 3
-    type: 0
-    route: 2
-    randomOffset: 1
-    offset: {x: 0, y: 0, z: 0}
-    facingRight: 1
-    time: 2
 --- !u!1 &2094490279
 GameObject:
   m_ObjectHideFlags: 0

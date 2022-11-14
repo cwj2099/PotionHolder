@@ -186,7 +186,7 @@ public abstract class Enemy : MonoBehaviour
         set { _ui = value; }
     }
 
-    [SerializeField] private GameObject _parent;
+    [SerializeField] public GameObject _parent;
 
 
     // ********************************************************************************************************************************
