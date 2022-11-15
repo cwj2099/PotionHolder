@@ -28,6 +28,8 @@ public class TowerLookingPreview : MonoBehaviour
         int maxIndex = elements.ToList().IndexOf(maxValue);
         bodyRenderer.material = TowerMaterials[maxIndex];
         aimerRenderer.material = TowerMaterials[maxIndex];
-        button.transform.localScale = new Vector3(0.5f + elements.Max() * 0.2f, 0.5f + elements.Max() * 0.2f, 0.5f + elements.Max() * 0.2f);
+        float size = 0.5f + elements.Max() * 0.2f;
+        if (size > 1.6f) { size = 1.6f; }
+        button.transform.localScale = new Vector3(size, size, size);
     }
 }

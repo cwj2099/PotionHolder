@@ -17,9 +17,9 @@ public enum Elements
 {
     Standard,
     Fire,
-    Water,
-    Thunder,
+    Wind,
     Earth,
+    Ice,
 }
 
 public abstract class Tower : MonoBehaviour
@@ -138,10 +138,36 @@ public abstract class Tower : MonoBehaviour
         set { _element = value; }
     }
 
+    // ********************************************************************************************************************************
+
+    //  TOWER GAMEOBJECT COMPONENTS
+
+    protected Transform _base;
+    protected Transform _turret; 
+
 // ********************************************************************************************************************************
 
 
     // FUNCTIONS
+
+    /// <summary>
+    /// FindTowerComponents() finds and stores the "base" and "turret" components of the 
+    /// </summary>
+    protected void FindTowerComponents()
+    {
+        foreach (Transform child in transform)
+        {
+            if (child.CompareTag("TowerBase"))
+            {
+                _base = child; 
+            }
+
+            if (child.CompareTag("TowerTurret"))
+            {
+                _turret = child;
+            }
+        }
+    }
 
     /// <summary>
     /// FireBullet() passes all relevant info to a new bullet and instantiates it.

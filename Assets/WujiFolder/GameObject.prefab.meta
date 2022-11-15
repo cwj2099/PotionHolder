@@ -1,6 +1,12 @@
 fileFormatVersion: 2
-guid: f9e6defe29f1b44448151ba66692a52f
+<<<<<<<< HEAD:Assets/WujiFolder/GameObject.prefab.meta
+guid: ec591e8c8cad73a4689b71be7ad7e0e9
 PrefabImporter:
+========
+guid: 2b70bf64f65e3a549a4e46a83be4eef0
+folderAsset: yes
+DefaultImporter:
+>>>>>>>> NoahBranch:Assets/Noah_Towers/Enemies/Prefabs/DEFAULTS.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

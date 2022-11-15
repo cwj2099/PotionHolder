@@ -120,9 +120,9 @@ public class PlaceTowerController : MonoBehaviour
         //The fire decide the piercing
         t.Pierce = data[0];
         //The wind decide the fire rate
-        t.Rate = 3f - (0.5f* data[1]);
+        t.Rate = 4f / (2 + data[1]);
         //The ice decide the speed
-        t.Speed = 0.1f + data[2]/4f;
+        t.Speed = 0.1f + data[2]/10f;
         //The earth decide the life
         t.Lifespan = 0.3f + data[3]*0.3f;
         //set looking
