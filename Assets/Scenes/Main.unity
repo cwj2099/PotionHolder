@@ -1690,35 +1690,35 @@ MonoBehaviour:
     randomOffset: 1
     offset: {x: 0, y: 0, z: 0}
     facingRight: 1
-    time: 2
+    time: 5
   - amount: 2
     type: 1
     route: 0
     randomOffset: 1
     offset: {x: 0, y: 0, z: 0}
     facingRight: 1
-    time: 2
+    time: 5
   - amount: 1
     type: 3
     route: 1
     randomOffset: 1
     offset: {x: 0, y: 0, z: 0}
     facingRight: 1
-    time: 2
+    time: 5
   - amount: 1
     type: 4
     route: 2
     randomOffset: 1
     offset: {x: 0, y: 0, z: 0}
     facingRight: 1
-    time: 2
+    time: 5
   - amount: 1
     type: 5
     route: 0
     randomOffset: 1
     offset: {x: 0, y: 0, z: 0}
     facingRight: 1
-    time: 2
+    time: 5
   - amount: 1
     type: 2
     route: 1
