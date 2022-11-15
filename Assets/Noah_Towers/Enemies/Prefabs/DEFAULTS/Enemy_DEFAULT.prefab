@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdaaea189264d914a80d02d1da278cf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourcesChance: 03000000030000000300000003000000
+  resourcesChance: 05000000050000000500000005000000
   effects:
   - {fileID: 4039033474239869953, guid: 10f2c1c596482934e8332576594b129c, type: 3}
   - {fileID: 1603379214552950539, guid: 30f55604d10a23147b3a8e2f4e8f6b84, type: 3}
@@ -420,6 +420,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2649976659823897086}
     m_Modifications:
+    - target: {fileID: 1329242468, guid: ee95482aafcd8c8458467c61ad1c7d85, type: 3}
+      propertyPath: _speed
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 1329242468, guid: ee95482aafcd8c8458467c61ad1c7d85, type: 3}
       propertyPath: _parent
       value: 

@@ -66,7 +66,9 @@ public class SpawnEnemies : MonoBehaviour
         else
         {
             enemy = enemy.GetComponentInChildren<Enemy>().gameObject;
+            GameObject temp = enemy.transform.parent.parent.gameObject;
             enemy.transform.parent.parent = path.transform;
+            Destroy(temp);
             enemy.transform.parent.localPosition = offset;
             enemy.transform.parent.localScale = new Vector3(enemy.transform.localScale.x * facing, enemy.transform.localScale.y, enemy.transform.localScale.z);
         }
@@ -75,6 +77,7 @@ public class SpawnEnemies : MonoBehaviour
         
        
         enemy.GetComponent<Enemy>()._parent = path;
+        path.GetComponent<Animator>().speed = enemy.GetComponent<Enemy>().Speed;
     }
 
     private void OnEnable()

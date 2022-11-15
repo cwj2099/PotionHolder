@@ -782,7 +782,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 0.46666667}
+  m_Color: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 0.45490196}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2336,7 +2336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 360123317906c5a448806527f349ca75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdingResources: 0b0000000b0000000b0000000b000000
+  holdingResources: 02000000020000000200000002000000
   selectedResources: 00000000000000000000000000000000
   selectedNumbers:
   - {fileID: 2688685819254393330}
